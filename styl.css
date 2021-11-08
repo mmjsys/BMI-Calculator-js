@@ -1,0 +1,9 @@
+* {margin:0px;}
+.header-center {
+    text-align: center;
+    background-size: contain;
+    background-color:#bbc6cb;
+    height: 50px;
+    padding-top: 10px;
+}
+
