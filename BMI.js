@@ -1,16 +1,14 @@
-document.getElementById("btn").addEventListener("click" , evented_func);
-
 function get_input_func() {
-    var Height = document.getElementById("Height").value / 100;
-    var Weight = document.getElementById("Weight").value;
+    var Height = $("#Height").val() / 100;
+    var Weight = $("#Weight").val();
     var inputs = {"Height" : Height , "Weight":Weight};
     return inputs;
 }
-
 function show_func(BMI) {
-    document.getElementById("res").textContent = BMI;
+    $(".result").remove();
+    text = $("<h3 class='result' ></h3>").text(BMI);
+    $(".text").append(text)
 }
-
 function claculate_func(vals) {
          var Height = vals["Height"];
          var Weight = vals["Weight"];
@@ -26,4 +24,4 @@ function evented_func() {
     var BMI = claculate_func(inputs);
     show_func(Math.floor(BMI));
 }
-
+$("#btn").click(evented_func);
